@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "whv",
+  "version": "1",
+  "content_scripts": [
+    {
+      "run_at":"document_start",
+      "matches": ["https://www.visaservices.org.in/*"],
+      "js": [ "whv-get.js"]
+    }
+  ]
+}
+  
