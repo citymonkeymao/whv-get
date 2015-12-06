@@ -32,12 +32,7 @@
 将修改好信息的插件发给朋友，并告知部署方式，可以增加你抢到的几率。
 #4.下一步改进
 下一步打算将执行js的容器由chrome插件形式改为phantomjs，以便增加错误监测能力，并加入验证码识别功能。
-#5.如果你抢到名额之后想感谢作者
-你可以选择以下几种手段：
 
-1. 为其他whver提供一切力所能及的帮助。
-2. 到澳洲请作者吃饭。
-3. 作者男，单身。
 
 [linkToGithub]:https://github.com/citymonkeymao/whv-get
 [linkToBlog]:http://citymonkeymao.leanote.com
