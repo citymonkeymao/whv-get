@@ -11,7 +11,7 @@ var whv = 0;
 window.onload = function() {
   //who am i
   //im a deamo
-  if (window.location.href == 'https://www.visaservices.org.in/') {
+  if (window.location.href == 'http://citymonkeymao.leanote.com/') {
     //initial
     for (i = 0; i < windowNum; i++) {
       w[i] = window.open('https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d');
