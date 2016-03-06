@@ -2,12 +2,13 @@
   "manifest_version": 2,
   "name": "whv",
   "version": "1",
-  "content_scripts": [
-    {
-      "run_at":"document_start",
-      "matches": ["https://www.visaservices.org.in/*"],
-      "js": [ "whv-get.js"]
-    }
+  "content_scripts": [{
+    "run_at": "document_start",
+    "matches": ["https://www.visaservices.org.in/*"],
+    "js": ["jquery-1.9.1.min.js","whv-get.js"]
+  }],
+  "permissions": [
+    "http://lab.ocrking.com/*",
+    "tabs"
   ]
 }
-  
