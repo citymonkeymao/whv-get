@@ -148,7 +148,7 @@ function monitor() {
                   //window.open('http://blog.ilc.edu.tw/blog/gallery/6557/6557-1013015.mp3');
                   setInterval(function () {
                       killCaptcha(function () {
-                          xdocument.getElementById('ctl00_plhMain_btnSubmit').click()
+                          document.getElementById('ctl00_plhMain_btnSubmit').click()
                       })
                   }, 2000);
                   setInterval(function () {
