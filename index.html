@@ -19,13 +19,15 @@
     </section>
 
     <section class="main-content">
-      <h1>
+      <p>[TOC]</p>
+
+<h1>
 <a id="1概述" class="anchor" href="#1%E6%A6%82%E8%BF%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.概述</h1>
 
 <h2>
 <a id="11作用" class="anchor" href="#11%E4%BD%9C%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.1作用</h2>
 
-<p>whv-get插件可以在抢澳洲whv的时候自动打开多个页面并自动填表+下一步。刷票过程可以进行到填个人信息那一步，验证码需要手动输入，之后的时间选择也需要操作者自己完成。</p>
+<p>whv-get插件可以在抢澳洲whv的时候自动打开多个页面并填写个人信息、识别验证码和自动下一步，对于邮箱验证，在收到邮件后，可以将邮件地址输入插件，插件将继续用输入的地址刷票。插件会帮你自动进行到时间选择那一步，时间选择需要手动完成，但页面上的验证码任然会被自动识别。</p>
 
 <h2>
 <a id="12效果" class="anchor" href="#12%E6%95%88%E6%9E%9C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2效果</h2>
@@ -35,7 +37,7 @@
 <h2>
 <a id="13时效问题" class="anchor" href="#13%E6%97%B6%E6%95%88%E9%97%AE%E9%A2%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.3时效问题</h2>
 
-<p>如果官方修改页面，whv-get插件可能失效。若发现时效，请通知作者，作者会在本博客上发布更新或失效通知，以免坑人。在用插件之前应该来<a href="http://citymonkeymao.leanote.com">我的博客</a>检查是否有更新，转载的时候也应标明出处。最近更新日期为<strong>2016-02-08</strong>。</p>
+<p>如果官方修改页面，whv-get插件可能失效。若发现时效，请通知作者，作者会在本博客上发布更新或失效通知，以免坑人。<strong>我的博客提供免登陆评论，任何人验证下邮箱就可以在下面评论了。</strong>在用插件之前应该来<a href="http://citymonkeymao.leanote.com">我的博客</a>检查是否有更新，转载的时候也应标明出处。最近更新日期为<strong>2015-03-06</strong>。</p>
 
 <h1>
 <a id="2使用说明" class="anchor" href="#2%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.使用说明</h1>
@@ -43,7 +45,12 @@
 <h2>
 <a id="21获取插件" class="anchor" href="#21%E8%8E%B7%E5%8F%96%E6%8F%92%E4%BB%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.1获取插件</h2>
 
-<p>从<a href="https://github.com/citymonkeymao/whv-get">github</a>上下载插件:点Download ZIP下载，并解压到whv-get文件夹中，<strong>此时whv-get文件夹中包含2个文件：manifist.json和whv-get.js</strong>。</p>
+<p>从<a href="http://citymonkeymao.github.io/whv-get/">下载页</a>中点Download .zip下载，并解压到whv-get文件夹中。
+  Github是一个自由的开源软件托管平台，但经常被封。打不开属于正常现象，各位看官自己想办法。这里分享《肖申克的救赎》中一句经典台词：</p>
+
+<blockquote>
+<p>不要忘了，这个世界穿透一切高墙的东西，它就在我们的内心深处，他们无法达到，也接触不到，那就是希望。</p>
+</blockquote>
 
 <h2>
 <a id="22设置信息" class="anchor" href="#22%E8%AE%BE%E7%BD%AE%E4%BF%A1%E6%81%AF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.2设置信息</h2>
@@ -56,45 +63,53 @@
 <li>将var mobileNumber = 后面''中的文字改为你的手机号。</li>
 <li>var email = 后面''中的文字改为邮箱。</li>
 <li>var city = 后面的数字改为你想递交签证的城市2 = shanghai , 1 = beijeng ,3 = guangzhou , 4 = chengdu。</li>
-<li>保存。</li>
+<li>var password = 后面的''中填写你设置的密码。</li>
+<li>保存。
+##  2.3导入插件
+下载chrome浏览器，在浏览器的setting选项中，切换到Extensions标签，勾选上方的开发者模式，将whv-get文件夹拖入chrome中，此时会在插件列表中看到一个叫whv的插件，勾选在隐身模式下启用。
+<img alt="插件导入后的样子">
+##  2.4刷
+要正常使用插件，需要在<strong>非安全模式</strong>下打开chrome，具体方法根据操作系统不同而不同
+
+<ul>
+<li>windows下：将whv-get文件夹中的start.bat放入chrome的安装路径（就是有chrome.exe那个目录），关闭所有chrome窗口，双击start.bat就会以非安全模式运行chrome
+<img alt="放入chrome目录的start.bat">
+</li>
+<li>mac和linux下：关闭所有chrome进程（mac下要右击任务栏中的chrome点退出），用命令行启动chrome，并加入参数 <code>--allow-running-insecure-content</code>。例：
+在mac下输入如下命令</li>
+</ul>
+</li>
 </ol>
 
-<h2>
-<a id="23导入插件" class="anchor" href="#23%E5%AF%BC%E5%85%A5%E6%8F%92%E4%BB%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.3导入插件</h2>
+<div class="highlight highlight-source-shell"><pre>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome<span class="pl-s"><span class="pl-pds">'</span> --allow-running-insecure-content </span></pre></div>
 
-<p>下载chrome浏览器，在浏览器的setting选项中，切换到Extensions标签，将whv-get文件夹拖入chrome中，此时会在插件列表中看到一个叫whv的插件。</p>
-
-<h2>
-<a id="24刷" class="anchor" href="#24%E5%88%B7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.4刷</h2>
-
-<p>在那个血腥的早晨，你打开chrome浏览器，打开 
-    <a href="https://www.visaservices.org.in/">https://www.visaservices.org.in/</a>
-页面，若配置正确，chrome会打开多个浏览器标签，并且用这些标签开始刷名额，所有窗口<strong>只能走到填写个人信息那一页。</strong>之后输入验证码和选择时间需手动完成。</p>
+<p>在那个血雨腥风的早晨，你用非安全模式打开chrome浏览器，打开<a href="https://www.visaservices.org.in/%E9%A1%B5%E9%9D%A2%EF%BC%8C%E8%8B%A5%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%EF%BC%8Cchrome%E4%BC%9A%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E7%AD%BE%EF%BC%8C%E5%B9%B6%E4%B8%94%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%87%E7%AD%BE%E5%BC%80%E5%A7%8B%E5%88%B7%E5%90%8D%E9%A2%9D%E3%80%82%E5%9C%A8https://www.visaservices.org.in/%E9%A1%B5%E9%9D%A2%E4%B8%8A%E5%9B%9E%E6%9C%89%E4%B8%AA%E5%B0%8F%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%8C%E5%9C%A8%E6%B2%A1%E6%9C%89%E6%94%B6%E5%88%B0%E9%82%AE%E4%BB%B6%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E4%BF%9D%E6%8C%81%E6%A1%86%E9%87%8C%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%EF%BC%8C%E6%94%B6%E5%88%B0%E9%82%AE%E4%BB%B6%E5%90%8E%EF%BC%8C%E5%B0%86%E9%82%AE%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E8%BE%93%E5%85%A5%E6%A1%86%E4%B8%AD%EF%BC%8C%E5%B9%B6%E5%85%B3%E9%97%AD%E5%85%B6%E4%BB%96%E5%B7%B2%E7%BB%8F%E6%89%93%E5%BC%80%E7%9A%84%E7%AA%97%E5%8F%A3%EF%BC%8C%E6%8F%92%E4%BB%B6%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E5%A1%AB%E5%86%99%E7%9A%84%E5%9C%B0%E5%9D%80%E5%B9%B6%E5%BC%80%E5%A7%8B%E5%88%B7%E3%80%82">https://www.visaservices.org.in/页面，若配置正确，chrome会打开多个浏览器标签，并且用这些标签开始刷名额。在https://www.visaservices.org.in/页面上回有个小输入框，在没有收到邮件的时候，保持框里没有内容，收到邮件后，将邮件中的地址输入框中，并关闭其他已经打开的窗口，插件会自动打开填写的地址并开始刷。</a></p>
 
 <h1>
 <a id="3辅助手段" class="anchor" href="#3%E8%BE%85%E5%8A%A9%E6%89%8B%E6%AE%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.辅助手段</h1>
 
 <h2>
-<a id="31代理服务器" class="anchor" href="#31%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1代理服务器</h2>
+<a id="31练习" class="anchor" href="#31%E7%BB%83%E4%B9%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1练习</h2>
 
-<p>目前来看，抢名额的服务器位于印度孟买。经测试发现，位于欧洲和<strong>日本</strong>的代理服务器效果较好。</p>
+<p>在抢名额页面上，用<strong>假护照号</strong>预约general类型，除了选择的类型不一样，其余要填的内容都一样。这样可以熟悉预约流程。</p>
 
 <h2>
-<a id="32拉帮结派" class="anchor" href="#32%E6%8B%89%E5%B8%AE%E7%BB%93%E6%B4%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2拉帮结派</h2>
+<a id="32代理服务器" class="anchor" href="#32%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2代理服务器</h2>
 
-<p>将修改好信息的插件发给朋友，并告知部署方式，可以增加你抢到的几率。</p>
+<p>目前来看，抢名额的服务器位于印度孟买。经测试发现，位于欧洲和<strong>日本</strong>的代理服务器效果较好。我自己抢和帮抢的时候都使用了一个日本vpn。</p>
+
+<h2>
+<a id="33拉帮结派" class="anchor" href="#33%E6%8B%89%E5%B8%AE%E7%BB%93%E6%B4%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3拉帮结派</h2>
+
+<p>将修改好信息的插件发给朋友，并告知部署和操作方式，可以增加你抢到的几率。</p>
 
 <h1>
-<a id="4下一步改进" class="anchor" href="#4%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%94%B9%E8%BF%9B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.下一步改进</h1>
+<a id="4你抢到名额之后" class="anchor" href="#4%E4%BD%A0%E6%8A%A2%E5%88%B0%E5%90%8D%E9%A2%9D%E4%B9%8B%E5%90%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.你抢到名额之后</h1>
 
-<p>下一步打算将执行js的容器由chrome插件形式改为phantomjs，以便增加错误监测能力，并加入验证码识别功能。</p>
-
-<h1>
-<a id="5代码修改记录" class="anchor" href="#5%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5.代码修改记录</h1>
-
-<ul>
-<li>2016-02-08修复标签连接失败时的处理方式</li>
-</ul>
+<p>并且想感谢作者，你可以选择以下几种手段：
+1. 为其他whver提供一切力所能及的帮助。
+2. 到澳洲请作者吃饭。
+3. 作者也是whv持有者，目前正在寻找澳洲IT方面的工作，有线索的欢迎举报。</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/citymonkeymao/whv-get">Whv-get</a> is maintained by <a href="https://github.com/citymonkeymao">citymonkeymao</a>.</span>
